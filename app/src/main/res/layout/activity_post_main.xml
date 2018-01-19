@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:title="Paladar"
+            android:titleTextColor="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginBottom="@dimen/pager_from_space_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+
+
+    <eu.long1.spacetablayout.SpaceTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="eu.long1.spacetablayout.SpaceTabLayoutBehavior"
+        app:number_of_tabs="three"
+        app:icon_one="@drawable/ic_local_phone_white_24dp"
+        app:tab_color="@color/colorPrimary"
+        app:button_color="@color/colorAccent"
+        app:icon_two="@drawable/ic_group_white_24dp"
+        app:text_one="Contacts"
+        app:text_two="Groups"
+        app:text_three="Projects"
+        app:icon_three="@drawable/ic_content_paste_white_24dp"
+        app:starting_position="three" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
